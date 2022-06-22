@@ -102,6 +102,11 @@
             android:exported="false"
             android:label="@string/proxy" />
         <activity
+            android:name=".SubscriptionActivity"
+            android:configChanges="uiMode"
+            android:exported="false"
+            android:label="@string/sub_active" />
+        <activity
             android:name=".ProvidersActivity"
             android:configChanges="uiMode"
             android:exported="false"

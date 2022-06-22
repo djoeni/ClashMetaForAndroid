@@ -18,6 +18,9 @@
             name="profileName"
             type="String" />
         <variable
+            name="profileType"
+            type="com.github.kr328.clash.service.model.Profile.Type" />
+        <variable
             name="colorClashStarted"
             type="int" />
         <variable
@@ -29,6 +32,7 @@
 
         <import type="android.view.View" />
         <import type="com.github.kr328.clash.design.MainDesign.Request" />
+        <import type="com.github.kr328.clash.service.model.Profile.Type" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -73,7 +77,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/launch_name"
+                        android:text="@string/clash_meta_for_android"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
                 </LinearLayout>
 
@@ -106,6 +110,16 @@
                     app:icon="@drawable/ic_baseline_view_list"
                     app:subtext="@{profileName != null ? @string/format_profile_activated(profileName) : @string/not_selected}"
                     app:text="@string/profile" />
+
+                <com.github.kr328.clash.design.view.LargeActionCard
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/main_card_margin_vertical"
+                    android:onClick="@{() -> self.request(Request.OpenSubscription)}"
+                    android:visibility="@{clashRunning &amp;&amp; profileType == Type.Url ? View.VISIBLE : View.GONE}"
+                    app:icon="@drawable/ic_baseline_meta"
+                    app:text="@{profileName != null ? @string/format_sub_usage(profileName) : @string/not_selected}"
+                    app:subtext="@{clashRunning ? @string/format_traffic_forwarded(forwarded) : @string/tap_to_start}" />
 
                 <com.github.kr328.clash.design.view.LargeActionLabel
                     android:layout_width="match_parent"

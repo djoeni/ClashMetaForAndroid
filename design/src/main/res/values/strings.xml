@@ -11,7 +11,6 @@
     <string name="direct_mode">Direct Mode</string>
     <string name="rule_mode">Rule Mode</string>
     <string name="global_mode">Global Mode</string>
-    <string name="script_mode">Script Mode</string>
     <string name="proxy_empty_tips">No groups can be displayed</string>
 
     <string name="profiles">Profiles</string>
@@ -298,4 +297,16 @@
     <string name="geoip_url" translatable="false">https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat</string>
     <string name="mmdb_url" translatable="false">https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb</string>
     <string name="geosite_url" translatable="false">https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat</string>
+
+    <string name="sub_active">Subscription</string>
+    <string name="sub_name">Subscription Name</string>
+    <string name="sub_name_dummy">Consistent With Profile Name</string>
+    <string name="sub_usage">Total Usage</string>
+    <string name="sub_usage_dummy">12GB/300GB</string>
+    <string name="format_sub_usage">%s Total Usage</string>
+    <string name="sub_type">Subscription Type</string>
+    <string name="sub_type_dummy">Silver Gamer</string>
+    <string name="sub_end">Remaining Days</string>
+    <string name="sub_end_dummy">24 Day : 2 Hour : 43 Minutes</string>
+
 </resources>
