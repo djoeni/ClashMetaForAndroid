@@ -65,7 +65,9 @@ subprojects {
 
         if (isApp) {
             packagingOptions {
-                excludes.add("DebugProbesKt.bin")
+                resources {
+                    excludes.add("DebugProbesKt.bin")
+                }
             }
         }
 
